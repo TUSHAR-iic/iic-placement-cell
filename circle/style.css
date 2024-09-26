@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height :100vh;
+    background: #222;
+}
+.cmpnyCntr{
+    position: relative;
+    width : 700px;
+    height: 700px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+.cmpnyCntr .icon{
+    position: relative;
+    left:-50%;
+    width: 100%;
+    height :100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer ;
+}
+.cmpnyCntr .icon .imgBox{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0 4px #222,
+    0 0 0 6px #fff;
+    transform: rotate(calc(360deg/8 * var(--i)));
+    transform-origin: 380px;
+    z-index: 100;
+    
+}
+.icon .imgBox img{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
